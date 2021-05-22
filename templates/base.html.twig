@@ -11,9 +11,11 @@
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('navbar') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="ui">
+        <div id="navbar"></div>
         {% block body %}{% endblock %}
     </body>
 </html>
