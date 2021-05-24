@@ -173,7 +173,7 @@ class Crud extends Component {
     const {members, newMember, submitStatus} = this.state;
     const title = "Liste des membres";
     return (
-      <>
+      <div className="ui container">
         <h1>{title}</h1>
         <Table inverted className="ui inverted black memberList">
           <Table.Header>
@@ -183,7 +183,7 @@ class Crud extends Component {
               <Table.HeaderCell>Age</Table.HeaderCell>
               <Table.HeaderCell></Table.HeaderCell>
               <Table.HeaderCell></Table.HeaderCell>
-              <Table.HeaderCell><Clock/></Table.HeaderCell>
+              <Table.HeaderCell><a href="/amis"><Clock/></a></Table.HeaderCell>
             </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -193,7 +193,7 @@ class Crud extends Component {
           </Table.Body>
         </Table>
         <CrudForm handleAdd = {this.handleAdd} handleChange = {this.handleChange} submitStatus = {submitStatus} newMember = {newMember}/>
-      </>
+      </div>
     );
   }
 }
